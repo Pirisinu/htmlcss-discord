@@ -5,6 +5,11 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
 a{
   text-decoration: none;
 }
@@ -15,6 +20,12 @@ h1,h2{
   font-weight: 900;
   font-size: 2rem;
   margin: 20px auto;
+}
+h2, p{
+  padding: 15px;
+}
+h3{
+  font-size: 1rem;
 }
 .container{
   width: 90%;
@@ -39,6 +50,9 @@ h1,h2{
   border-radius: 15px;
   cursor: pointer;
 }
+.btn:hover{
+  box-shadow: #23272ab4;
+}
 .btn-big{
   font-size: 1.1rem;
   padding: 10px 20px;
@@ -47,6 +61,16 @@ h1,h2{
   background-color: white;
   color: black;
 }
+.btn-prpl{
+  background-color: #5865F2;
+  color: white;
+}
+.foot-btn{
+  display: block;
+  padding-left: 0px;
+  color: white;
+}
+
 /* HEADER */
 
 .top-bar{
@@ -65,9 +89,6 @@ h1,h2{
   padding: 0px 20px;
   color: white;
 }
-/* .nav-link a:hover{
-  text-decoration: underline;
-} */ /* DA VEDERE */
 header section{
   width: 100%;
 }
@@ -77,6 +98,9 @@ header section{
 }
 .jumbotron{
   height: 500px;
+}
+.jumbotron h1{
+  width: 40%;
 }
 .head-text{
   width: 70%;
@@ -99,8 +123,7 @@ header section{
 main section:nth-child(even){
   background-color: #F6F6F6;
 }
-main section #dir-col{
-  flex-direction: column;
+.dir-col{
   justify-content: space-between;
   text-align: center;
 }
@@ -119,7 +142,53 @@ main section #dir-col{
   flex-direction: column;
   justify-content: center;
 }
-.section-txt h2, p{
-  padding: 15px;
+.last-row{
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
 }
+.last-row div{
+
+}
+/* FOOTER */
+footer{
+  background-color: #23272A;
+  color: white;
+  margin-top: 50px;
+}
+footer section{
+  padding-top: 80px;
+  margin: auto;
+  height: 100%;
+  flex-direction: row;
+}
+footer>div{
+  width: 85%;
+  margin: auto;
+
+}
+footer h3{
+  color: #5865F2;
+}
+footer p{
+  padding-left: 0px;
+}
+
+#col-big{
+  width: 30%;
+}
+#col-link{
+  width: 70%;
+  justify-content: space-evenly;
+}
+.foot-column{
+  flex-direction: column;
+}
+.foot-credit{
+  border-top: 1px solid #4F5D8C;
+  padding: 20px 0px 40px;
+  justify-content: space-between;
+}
+
+
 
